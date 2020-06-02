@@ -1,0 +1,12 @@
+.icons {
+    &__imdb {
+        width: 5rem;
+        display: block;
+        background-image: linear-gradient(to right top, #ffc60b, #ff8b00);
+        color: $color-grey-light-2;
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

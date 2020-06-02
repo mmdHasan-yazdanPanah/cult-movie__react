@@ -1,0 +1,35 @@
+.home {
+    font-size: 2rem;
+    min-height: 100rem;
+
+    display: grid;
+    grid-template-columns:
+        0.3fr [full-start] repeat(7, [col-start] minmax(5rem, 1fr) [col-end])
+        [full-end] 0.3fr;
+}
+
+.main {
+    grid-row: 4 / span 1;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    row-gap: 4rem;
+    column-gap: 8rem;
+    grid-template-columns: 1fr 1fr;
+
+    margin-top: 10rem;
+
+    &__sidebar {
+        display: flex;
+        grid-column: 2 / 3;
+        justify-content: flex-start;
+        background-image: linear-gradient(
+            $color-grey-light-3 10%,
+            $color-grey-light-2 100%
+        );
+        box-shadow: 0 2rem 4rem rgba($color-grey-dark-1, 0.2);
+        height: 100%;
+        align-self: center;
+        padding: 2rem;
+    }
+}

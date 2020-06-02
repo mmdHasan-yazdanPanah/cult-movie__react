@@ -1,0 +1,136 @@
+.rate-box {
+    &__header {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    &__movies,
+    &__series {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 4rem;
+        column-gap: 4.5rem;
+        justify-items: center;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        transition: all 1s;
+    }
+
+    &__item {
+        display: block;
+        text-decoration: none;
+        height: 20rem;
+        width: 100%;
+        box-shadow: 0px 1rem 10px -6px rgba($color-grey-dark-1, 0.4);
+        transition: all 0.5s;
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        &:hover {
+            box-shadow: 0px 2rem 10px -6px rgba($color-grey-dark-1, 0.4);
+            transform: translateY(-1rem);
+
+            .rate-box__image-info {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+
+    &__image-box {
+        height: 100%;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__image-info {
+        font-size: 1.2rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba($color-grey-dark-1, 0.8);
+        color: $color-grey-light-1;
+        text-align: center;
+        height: auto;
+        transition: all 0.2s ease-out;
+        overflow: hidden;
+        transform: translateY(10%);
+        opacity: 0;
+        overflow: hidden;
+        padding: 1rem 0.5rem;
+        line-height: 2;
+    }
+
+    &__series {
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__button {
+        color: $color-secondary-light;
+        padding: 0.5rem 2rem;
+        background: transparent;
+        border: 2px solid currentColor;
+        font-family: inherit;
+        font-weight: bold;
+        margin: 0 1rem;
+        box-shadow: 1px 1px 1rem $color-grey-dark-2;
+        transition: all 0.2s;
+
+        &:not(:disabled) {
+            color: $color-secondary-dark;
+            box-shadow: none;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-secondary-light;
+            }
+        }
+    }
+
+    &__meta {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        letter-spacing: 1px;
+    }
+}
+
+.show {
+    &-enter {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    &-enter-active {
+        opacity: 1;
+        display: block;
+        visibility: visible;
+    }
+
+    &-exit {
+        opacity: 1;
+        display: block;
+        visibility: visible;
+    }
+
+    &-exit-active {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}

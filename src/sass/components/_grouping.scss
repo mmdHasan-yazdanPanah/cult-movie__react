@@ -1,0 +1,33 @@
+.grouping {
+    width: max-content;
+    padding: 0 1.5rem 0 1rem;
+    height: min-content;
+    border-right: 1px solid $color-primary-light;
+    margin-right: 2rem;
+
+    &:first-child {
+        margin-top: 7rem;
+    }
+
+    &:not(:first-child) {
+        margin-top: 4rem;
+    }
+
+    &__heading {
+        margin-bottom: 2.5rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2rem 0 0;
+        column-gap: 3rem;
+        row-gap: 1rem;
+        list-style: square;
+    }
+
+    &__item {
+        font-size: 1.1rem;
+        color: $color-grey-dark-2;
+    }
+}

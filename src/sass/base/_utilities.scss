@@ -1,0 +1,133 @@
+.text {
+    &--color-secondary {
+        &:nth-child(even) {
+            color: $color-secondary-light;
+        }
+
+        &:nth-child(odd) {
+            color: $color-secondary-dark;
+        }
+    }
+
+    &--color-dark {
+        color: $color-grey-dark-2;
+    }
+
+    &--color-light {
+        color: $color-grey-light-2;
+    }
+
+    &--color-primary {
+        color: $color-primary-dark;
+    }
+
+    &--color-primary-light {
+        color: $color-primary-light;
+    }
+
+    &--color-success {
+        color: $color-success;
+    }
+
+    &--color-danger {
+        color: $color-danger;
+    }
+
+    &--color-wrong {
+        color: $color-wrong;
+    }
+
+    &--small {
+        font-size: 1rem !important;
+    }
+    &--med {
+        font-size: 1.4rem;
+    }
+    &--large {
+        font-size: 2rem;
+        font-family: $font-display;
+        font-weight: lighter;
+    }
+
+    &--right {
+        text-align: right !important;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--english:lang(en) {
+        font-family: cursive, sans-serif;
+    }
+
+    &--bold {
+        font-weight: bold;
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+}
+
+.margin {
+    &--right-sm {
+        margin-right: 0.5rem;
+    }
+
+    &--left {
+        &-sm {
+            margin-left: 0.5rem;
+        }
+
+        &-md {
+            margin-left: 1.5rem;
+        }
+    }
+
+    &--top {
+        &-lg {
+            margin-top: 4rem;
+        }
+    }
+
+    &--bottom {
+        &-md {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+.flex {
+    display: flex !important;
+
+    &--column {
+        flex-direction: column !important;
+    }
+
+    &--justify-between {
+        justify-content: space-between !important;
+    }
+
+    &--justify-evenly {
+        justify-content: space-evenly !important;
+    }
+
+    &--align-self-stretch {
+        align-self: stretch;
+    }
+}
+.align-items--center {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap;
+}
+
+.justify-self {
+    &--center {
+        justify-self: center;
+    }
+
+    &--end {
+        justify-self: end;
+    }
+}

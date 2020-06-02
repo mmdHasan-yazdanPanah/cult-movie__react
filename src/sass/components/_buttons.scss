@@ -1,0 +1,83 @@
+.button {
+    text-decoration: none;
+    text-align: center;
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+        text-align: center;
+    }
+
+    &--outline {
+        border: 4px solid currentColor;
+        color: $color-grey-dark-3;
+        padding: 0.5rem 5.4rem 0.5rem 1.6rem;
+        font-size: 1.4rem;
+        position: relative;
+        font-weight: bold;
+        font-family: $font-display;
+
+        &:hover {
+            .button__label--type1 {
+                transform: translateX(3.8rem);
+            }
+
+            .button__arrow--right {
+                opacity: 0;
+                transform: rotate(180deg) translateX(-3.6rem) scaleX(0.1);
+            }
+
+            .button__arrow--left {
+                opacity: 1;
+                transform: rotate(180deg) translateX(0) scaleX(1);
+            }
+        }
+
+        &:active {
+            color: $color-grey-dark-2;
+        }
+    }
+
+    &__arrow,
+    &__label--type1 {
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        perspective: 1000;
+    }
+
+    &__label--type1 {
+        transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+        display: inline-block;
+    }
+
+    &__arrow {
+        width: 3rem;
+        height: 1.2rem;
+        fill: currentColor;
+        transform: rotate(180deg);
+        position: absolute;
+        transition: opacity 0.4s cubic-bezier(0.86, 0, 0.07, 1),
+            transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+        top: 0.8rem;
+
+        &--right {
+            right: 4.6rem;
+            transform-origin: right center;
+        }
+
+        &--left {
+            opacity: 0;
+            left: 4.6rem;
+            transform-origin: left center;
+            transform: rotate(180deg) translateX(3.6rem) scaleX(0.1);
+        }
+    }
+
+    &__radio-check {
+        display: none;
+
+        &:checked {
+            display: block;
+        }
+    }
+}
